@@ -11,6 +11,8 @@ from tkinter import scrolledtext
 
 os.environ["OPENAI_API_KEY"] = apikey.APIKEY
 
+#Document Loading
+
 pdf_files = [
     r"C:\Users\krish\Desktop\Python VS\newenv\ChatbotZIP\data_resumes\associate-data-scientist-resume-example.pdf",
     r"C:\Users\krish\Desktop\Python VS\newenv\ChatbotZIP\data_resumes\data-scientist-intern-resume-example.pdf",
@@ -75,7 +77,7 @@ user_input_text = scrolledtext.ScrolledText(root, height=5, width=50)
 user_input_text.pack(padx=10, pady=50)
 submit_button = tk.Button(root, text="Submit", command=handle_query,height=2, width=8)
 submit_button.pack(padx=10, pady=15)
-initial_response = "Hello! How can I assist you today?"
+initial_response = "Hello! How can I assist you today? \n\n"
 response_text = scrolledtext.ScrolledText(root, height=11, width=65)
 response_text.pack(padx=10, pady=50)
 response_text.insert(tk.END, initial_response)
